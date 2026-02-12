@@ -11,7 +11,7 @@ Voice dictation apps are expensive. Whispah is not.
 | [Wispr Flow](https://wisprflow.ai/pricing) | $144/year | Yes |
 | [SuperWhisper](https://superwhisper.com/) | $85/year or $249 lifetime | No |
 | [MacWhisper Pro](https://goodsnooze.gumroad.com/l/macwhisper) | $30+ one-time | No |
-| **Whispah** | **Free, forever** | **No** |
+| **[Whispah](https://github.com/miketalley/whispah)** | **Free, forever** | **No** |
 
 That's up to **$144/year back in your pocket** — and your voice data never leaves your machine.
 
