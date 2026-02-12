@@ -1,25 +1,25 @@
-# Whispah
+# Wispuh
 
 **Free, offline speech-to-text for macOS.** Press a hotkey, speak, and your words appear wherever your cursor is. No cloud, no account, no subscription — just a 740 KB app powered by [whisper.cpp](https://github.com/ggml-org/whisper.cpp) running entirely on your Mac.
 
-## Why Whispah?
+## Why Wispuh?
 
-Voice dictation apps are expensive. Whispah is not.
+Voice dictation apps are expensive. Wispuh is not.
 
 | App | Cost | Requires Internet |
 |---|---|---|
 | [Wispr Flow](https://wisprflow.ai/pricing) | $144/year | Yes |
 | [SuperWhisper](https://superwhisper.com/) | $85/year or $249 lifetime | No |
 | [MacWhisper Pro](https://goodsnooze.gumroad.com/l/macwhisper) | $30+ one-time | No |
-| **[Whispah](https://github.com/miketalley/whispah)** | **Free, forever** | **No** |
+| **[Wispuh](https://github.com/miketalley/wispuh)** | **Free, forever** | **No** |
 
 That's up to **$144/year back in your pocket** — and your voice data never leaves your machine.
 
 ## Download
 
-**[Download Whispah v0.1.0](https://github.com/miketalley/whispah/releases/download/v0.1.0/Whispah-v0.1.0.dmg)** — macOS 14+ &bull; 740 KB
+**[Download Wispuh v0.1.0](https://github.com/miketalley/wispuh/releases/download/v0.1.0/Wispuh-v0.1.0.dmg)** — macOS 14+ &bull; 740 KB
 
-Open the `.dmg`, drag Whispah to Applications, and launch. On first run it downloads the Whisper model (~148 MB) — after that, everything runs offline.
+Open the `.dmg`, drag Wispuh to Applications, and launch. On first run it downloads the Whisper model (~148 MB) — after that, everything runs offline.
 
 ## How It Works
 
@@ -40,7 +40,7 @@ That's it. Three steps. No setup wizard, no sign-in, no onboarding flow.
 
 ## Permissions
 
-Whispah needs two permissions on first launch:
+Wispuh needs two permissions on first launch:
 
 | Permission | Why |
 |---|---|
@@ -52,10 +52,10 @@ Whispah needs two permissions on first launch:
 Requires [XcodeGen](https://github.com/yonaskolb/XcodeGen), Xcode 16+, and macOS 14+.
 
 ```bash
-git clone https://github.com/miketalley/whispah.git
-cd whispah
+git clone https://github.com/miketalley/wispuh.git
+cd wispuh
 xcodegen generate
-open Whispah.xcodeproj
+open Wispuh.xcodeproj
 ```
 
 Build and run from Xcode (Cmd+R).
@@ -70,8 +70,8 @@ Managed via Swift Package Manager — resolved automatically by Xcode:
 ## Architecture
 
 ```
-Whispah/
-├── WhispahApp.swift              # App entry point
+Wispuh/
+├── WispuhApp.swift              # App entry point
 ├── AppDelegate.swift             # Menu bar setup
 ├── AppState.swift                # Central state coordinator
 ├── HotkeyManager.swift           # Option+Space hotkey

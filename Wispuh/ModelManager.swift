@@ -17,7 +17,7 @@ final class ModelManager {
 
     private static var appSupportDirectory: URL {
         let dir = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-            .appendingPathComponent("Whispah")
+            .appendingPathComponent("Wispuh")
         try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
         return dir
     }
@@ -25,7 +25,7 @@ final class ModelManager {
     func ensureModelAvailable() async {
         if FileManager.default.fileExists(atPath: modelFileURL.path) {
             isReady = true
-            print("[Whispah] Model already downloaded at \(modelFileURL.path)")
+            print("[Wispuh] Model already downloaded at \(modelFileURL.path)")
             return
         }
 
@@ -36,7 +36,7 @@ final class ModelManager {
         isDownloading = true
         downloadProgress = 0
         errorMessage = nil
-        print("[Whispah] Downloading whisper model...")
+        print("[Wispuh] Downloading whisper model...")
 
         do {
             let (asyncBytes, response) = try await URLSession.shared.bytes(from: Self.modelURL)
@@ -60,11 +60,11 @@ final class ModelManager {
             downloadProgress = 1.0
             isDownloading = false
             isReady = true
-            print("[Whispah] Model downloaded successfully (\(data.count / 1_048_576) MB)")
+            print("[Wispuh] Model downloaded successfully (\(data.count / 1_048_576) MB)")
         } catch {
             isDownloading = false
             errorMessage = error.localizedDescription
-            print("[Whispah] Model download failed: \(error)")
+            print("[Wispuh] Model download failed: \(error)")
         }
     }
 }

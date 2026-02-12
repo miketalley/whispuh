@@ -10,7 +10,7 @@ enum PermissionChecker {
         case .notDetermined:
             return await AVCaptureDevice.requestAccess(for: .audio)
         case .denied, .restricted:
-            print("[Whispah] Microphone access denied")
+            print("[Wispuh] Microphone access denied")
             return false
         @unknown default:
             return false
@@ -20,7 +20,7 @@ enum PermissionChecker {
     static func checkAccessibilityAccess() -> Bool {
         let trusted = AXIsProcessTrusted()
         if !trusted {
-            print("[Whispah] Accessibility access not granted — prompting user")
+            print("[Wispuh] Accessibility access not granted — prompting user")
             let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue(): true] as CFDictionary
             AXIsProcessTrustedWithOptions(options)
         }

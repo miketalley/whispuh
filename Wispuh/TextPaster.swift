@@ -6,12 +6,12 @@ final class TextPaster {
 
     func captureCurrentApp() {
         previousApp = NSWorkspace.shared.frontmostApplication
-        print("[Whispah] Captured frontmost app: \(previousApp?.localizedName ?? "none")")
+        print("[Wispuh] Captured frontmost app: \(previousApp?.localizedName ?? "none")")
     }
 
     func paste(text: String) {
         guard !text.isEmpty else {
-            print("[Whispah] Nothing to paste — empty transcription")
+            print("[Wispuh] Nothing to paste — empty transcription")
             return
         }
 
@@ -53,7 +53,7 @@ final class TextPaster {
         keyUp?.flags = .maskCommand
         keyUp?.post(tap: .cghidEventTap)
 
-        print("[Whispah] Simulated Cmd+V")
+        print("[Wispuh] Simulated Cmd+V")
     }
 
     private func restoreClipboard(_ contents: [[NSPasteboard.PasteboardType: Data]], pasteboard: NSPasteboard) {
@@ -67,6 +67,6 @@ final class TextPaster {
             }
             pasteboard.writeObjects([item])
         }
-        print("[Whispah] Clipboard restored")
+        print("[Wispuh] Clipboard restored")
     }
 }

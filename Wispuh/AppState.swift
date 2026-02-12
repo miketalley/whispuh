@@ -49,7 +49,7 @@ final class AppState {
     private func startRecording() {
         guard modelManager.isReady else {
             statusMessage = "Model not ready"
-            print("[Whispah] Cannot record — model not ready")
+            print("[Wispuh] Cannot record — model not ready")
             return
         }
 
@@ -61,9 +61,9 @@ final class AppState {
             statusMessage = "Recording..."
             overlayController.show(appState: self)
             onRecordingStateChanged?(true)
-            print("[Whispah] Recording started")
+            print("[Wispuh] Recording started")
         } catch {
-            print("[Whispah] Failed to start recording: \(error)")
+            print("[Wispuh] Failed to start recording: \(error)")
             statusMessage = "Error: \(error.localizedDescription)"
         }
     }
@@ -74,7 +74,7 @@ final class AppState {
         isTranscribing = true
         statusMessage = "Transcribing..."
         onRecordingStateChanged?(false)
-        print("[Whispah] Recording stopped. Captured \(samples.count) samples (\(String(format: "%.1f", Double(samples.count) / 16000.0))s)")
+        print("[Wispuh] Recording stopped. Captured \(samples.count) samples (\(String(format: "%.1f", Double(samples.count) / 16000.0))s)")
 
         Task {
             do {
@@ -90,7 +90,7 @@ final class AppState {
                     isTranscribing = false
                     statusMessage = "Error: \(error.localizedDescription)"
                     overlayController.hide()
-                    print("[Whispah] Transcription failed: \(error)")
+                    print("[Wispuh] Transcription failed: \(error)")
                 }
             }
         }

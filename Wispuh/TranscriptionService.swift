@@ -8,7 +8,7 @@ final class TranscriptionService {
         let params = WhisperParams(strategy: .greedy)
         params.language = .english
         whisper = Whisper(fromFileURL: fileURL, withParams: params)
-        print("[Whispah] Whisper model loaded")
+        print("[Wispuh] Whisper model loaded")
     }
 
     func transcribe(audioFrames: [Float]) async throws -> String {
@@ -18,7 +18,7 @@ final class TranscriptionService {
 
         let segments = try await whisper.transcribe(audioFrames: audioFrames)
         let text = segments.map(\.text).joined().trimmingCharacters(in: .whitespacesAndNewlines)
-        print("[Whispah] Transcribed: \(text)")
+        print("[Wispuh] Transcribed: \(text)")
         return text
     }
 
