@@ -2,6 +2,8 @@
 
 **Free, offline speech-to-text for macOS.** Press a hotkey, speak, and your words appear wherever your cursor is. No cloud, no account, no subscription — just a 740 KB app powered by [whisper.cpp](https://github.com/ggml-org/whisper.cpp) running entirely on your Mac.
 
+🌐 **Website:** [wispuh.com](https://wispuh.com)
+
 ## Why Wispuh?
 
 Voice dictation apps are expensive. Wispuh is not.
