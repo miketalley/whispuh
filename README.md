@@ -1,28 +1,42 @@
 # Whispah
 
-**Offline speech-to-text for macOS.** Press a hotkey, speak, and your words appear wherever your cursor is. No cloud, no subscriptions — powered by [whisper.cpp](https://github.com/ggml-org/whisper.cpp) running entirely on your Mac.
+**Free, offline speech-to-text for macOS.** Press a hotkey, speak, and your words appear wherever your cursor is. No cloud, no account, no subscription — just a 740 KB app powered by [whisper.cpp](https://github.com/ggml-org/whisper.cpp) running entirely on your Mac.
+
+## Why Whispah?
+
+Voice dictation apps are expensive. Whispah is not.
+
+| App | Cost | Requires Internet |
+|---|---|---|
+| [Wispr Flow](https://wisprflow.ai/pricing) | $144/year | Yes |
+| [SuperWhisper](https://superwhisper.com/) | $85/year or $249 lifetime | No |
+| [MacWhisper Pro](https://goodsnooze.gumroad.com/l/macwhisper) | $30+ one-time | No |
+| **Whispah** | **Free, forever** | **No** |
+
+That's up to **$144/year back in your pocket** — and your voice data never leaves your machine.
 
 ## Download
 
-**[Download Whispah v0.1.0](https://github.com/miketalley/whispah/releases/download/v0.1.0/Whispah-v0.1.0.dmg)** — macOS 14+
+**[Download Whispah v0.1.0](https://github.com/miketalley/whispah/releases/download/v0.1.0/Whispah-v0.1.0.dmg)** — macOS 14+ &bull; 740 KB
 
-Open the `.dmg`, drag Whispah to Applications, and launch it. On first run it will download the Whisper model (~148 MB) automatically.
+Open the `.dmg`, drag Whispah to Applications, and launch. On first run it downloads the Whisper model (~148 MB) — after that, everything runs offline.
 
 ## How It Works
 
 1. **Option + Space** — starts recording (a floating pill appears at the top of your screen)
 2. **Speak** — say whatever you want transcribed
-3. **Option + Space again** — stops recording, transcribes your speech, and pastes the text into whatever app you were using
+3. **Option + Space again** — stops recording, transcribes your speech, and pastes the text right where you left off
 
-That's it. Your clipboard is preserved — Whispah saves it before pasting and restores it after.
+That's it. Three steps. No setup wizard, no sign-in, no onboarding flow.
 
 ## Features
 
-- **Fully offline** — all transcription happens locally via whisper.cpp, nothing leaves your Mac
-- **Works anywhere** — dictate into any text field: editors, browsers, chat apps, terminal
-- **Menu bar app** — lives in your menu bar, no dock icon, stays out of your way
-- **Non-activating overlay** — the recording indicator doesn't steal focus from your current app
-- **Clipboard-safe** — saves and restores your clipboard contents around each paste
+- **100% free and open source** — MIT licensed, no premium tier, no "upgrade to unlock"
+- **Fully offline** — all transcription happens on-device via whisper.cpp. Nothing is sent anywhere
+- **Tiny footprint** — 740 KB app, menu bar only, no dock icon, near-zero idle resource usage
+- **Works everywhere** — dictate into any text field: VS Code, Safari, Slack, Notes, Terminal — if you can type in it, you can speak into it
+- **Clipboard-safe** — saves your clipboard before pasting and restores it after, so you never lose what you copied
+- **Non-activating overlay** — the recording indicator floats above your work without stealing focus
 
 ## Permissions
 
@@ -35,7 +49,7 @@ Whispah needs two permissions on first launch:
 
 ## Build from Source
 
-Requires Xcode 16+ and macOS 14+.
+Requires [XcodeGen](https://github.com/yonaskolb/XcodeGen), Xcode 16+, and macOS 14+.
 
 ```bash
 git clone https://github.com/miketalley/whispah.git
